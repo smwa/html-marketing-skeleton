@@ -81,7 +81,7 @@
         }
       {% endif %}
       
-      let counter = 0;
+      let initialSlideIncounter = 0;
       Array.from(document.querySelectorAll('.sections > *')).forEach((el, elIndex) => {
         // Offscreen
         const rect = el.getBoundingClientRect();
@@ -95,8 +95,8 @@
           setTimeout(() => {
             el.style.transform = 'translateX(0)';
             el.style.opacity = 1.0;
-          }, 200 * (counter));
-          counter += 1;
+          }, 200 * (initialSlideIncounter));
+          initialSlideIncounter += 1;
         };
       });
     </script>
